@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/springapp1")
+@RequestMapping("/")
 public class AppController {
     
     @Autowired
