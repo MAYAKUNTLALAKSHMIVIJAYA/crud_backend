@@ -12,20 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/springapp1")
 public class AppController {
     
     @Autowired
     Service s;
-
-    // Root landing page
-    @GetMapping("/")
-    public String home() {
-        return "✅ SpringApp1 is running! Available endpoints: "
-                + "[/insert - POST], "
-                + "[/display - GET], "
-                + "[/update - PUT]";
-    }
-
+    
     @PostMapping("/insert")
     public String insert(@RequestBody Product p) {
         return s.insertData(p);
